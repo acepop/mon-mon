@@ -1,4 +1,4 @@
-class mon_apidia:
+class data_class:
     def __init__(self, mon_file_path, move_file_path):
         self.move_file = str(move_file_path)
         self.mon_file = str(mon_file_path)

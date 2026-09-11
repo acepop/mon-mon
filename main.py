@@ -1,15 +1,14 @@
 from class_mon.py import mon
-from class_mon_apidia.py import mon_apidia
+from class_data_class.py import data_class
 from class_move.py import move
-
-
-
+from class_spcies.py import species
 
 
 
 def main():
-    mon_apidia = mon_apidia(r".\mon.csv",r".\move.csv")
-    mon1 = mon(0,mon_apidia)
+    data_class = data_class(r".\mon.csv",r".\move.csv")
+    
+    mon1 = mon(0,data_class)
 
 
 
