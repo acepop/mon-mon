@@ -6,9 +6,9 @@ from class_spcies.py import species
 
 
 def main():
-    data_class = data_class(r".\mon.csv",r".\move.csv")
-    
-    mon1 = mon(0,data_class)
+    data = data_class(r".\species.csv",r".\move.csv")
+
+
 
 
 
