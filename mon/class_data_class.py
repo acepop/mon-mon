@@ -1,9 +1,11 @@
+from .class_species import species
+
 class data_class:
     def __init__(self, species_file_path, move_file_path):
         self.move_file = str(move_file_path)
         self.species_file = str(species_file_path)
-        self.moves = {}
-        self.species = {}
+        self.moves_list = {}
+        self.species_list = {}
 
         try:
             with open(str(self.move_file),"r") as move_file:
@@ -16,7 +18,7 @@ class data_class:
         for move in move_content:
             self.moves[move[0]] = move
 
-        for species in species_content:
-            self.species[species[0]] = species
+        for s_list in species_content:
+            self.species_list[s_list[0]] = species(s_list)
     def get_species(self,number): return self.species[number]
     def get_move(self,number): return self.moves[number]
