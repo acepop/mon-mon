@@ -1,21 +1,27 @@
 import json
 # relitive paths
-species_file = r"/home/adrian/Desktop/code/mon-mon/data/species.json"
-move_file = r"/home/adrian/Desktop/code/mon-mon/data/move.txt"
+pre_path = (str(__file__)).replace("test.py","")
+
+species_file = f"{pre_path}{r"data/species.json"}"
+move_file = f"{pre_path}{r"data/move.json"}"
 
 
 
 
 
 
-with open(species_file) as f: # with the listed file
-    rows = json.load(f)  # reads all of the data to a string
-    print(rows)
+with open(species_file, "r") as f: # with the listed file
+    data = json.load(f)  # reads all of the data to a string
+    dic = data[0]
+    for key, value in dic.items():
+        print(f"{key} : {value}")
 
 # trys to import file values as move_content and species_content
 with open(move_file) as f: # with the listed file
-    rows = json.load(f)  # reads all of the data to a string
-    print(rows)
+    data =  json.load(f)  # reads all of the data to a string
+    dic = data[0]
+    for key, value in dic.items():
+        print(f"{key} : {value}")
 
 def import_formater(atxt_file_import): 
     # changes the imported data into usibal data
