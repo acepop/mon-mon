@@ -5,7 +5,7 @@
     "elements": ["normal"],
     "base_stats": {"attack": 10, "resist": 5, "speed": 15, "health": 10},
     "level_track": [[0,0,0,0],[0,0,0,0],[2,1,3,3],[1,1,3,2],[3,2,3,3]],
-    "evolve": {"4": 2, "crouption": 3},
+    "evolves_track": {"4": 2, "crouption": 3},
     "move_table": [1, 2, 3, 4]
   }
 ]

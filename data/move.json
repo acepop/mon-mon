@@ -2,21 +2,21 @@
   {
     "number" : 0,
     "name" : "slash",
-    "type" : ["normal"],
+    "element" : ["normal"],
     "value" : 100,
     "abilit" : "attack"
   },
   {    
     "number" : 1,
     "name" : "byte",
-    "type" : ["normal"],
+    "element" : ["normal"],
     "value" : 140,
     "abilit" : "attack"
   },
   {
     "number" : 2,
     "name" : "splinter",
-    "type" : ["grass"],
+    "element" : ["grass"],
     "value" : 80,
     "abilit" : "attack"
   }

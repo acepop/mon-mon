@@ -6,23 +6,21 @@ import os
 
 def main():
 
+    # relative path to json files converts to full path then is passed to import data
     # relitive paths
-    species_file_path_rel = r"/data/species.csv"
-    move_file_path_rel = r"/data/move.csv"
+    species_file_path_rel = r"/data/species.json"
+    move_file_path_rel = r"/data/move.json"
     # converts to full paths
-    species_file_path_full = os.path.join(f"{os.path.dirname(__file__)}{species_file_path_rel}")
-    moves_file_path_full = os.path.join(f"{os.path.dirname(__file__)}{move_file_path_rel}")
+    pre_path = os.getcwd()
+    species_file_path_full = f"{pre_path}{species_file_path_rel}"
+    moves_file_path_full = f"{pre_path}{move_file_path_rel}"
     # passes pathes to data sequincer/reader to be indexed 
     pokeydex = data_class(species_file_path_full ,moves_file_path_full)
 
     # testing
     mon1 = mon()
-    mon1.set_species(pokeydex.get_species["1"])
+    mon1.set_species(pokeydex.get_species("1"))
     print(mon1.get_attack)
-
-
-
-
 
     print("hellow world")
 

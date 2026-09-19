@@ -1,6 +1,7 @@
 class move:
-    def __init__(self, name, element, valu, abilit):
+    def __init__(self, number, name, element, value, abilit):
+        self.number = int(number)
         self.name = str(name)
         self.element = str(element) 
-        self.valu = str(valu)
+        self.value = str(value)
         self.abilit = str(abilit)

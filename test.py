@@ -9,17 +9,13 @@ species_file = f"{pre_path}{r"data/species.json"}"
 move_file = f"{pre_path}{r"data/move.json"}"
 
 with open(species_file, "r") as f: # opens the file in read mode
-    mon_list = json.load(f)  # reads all of the data to a list
+    mon_list = json.load(f)  # reads all of the data to a list of ditc
 
-with open(move_file) as f: # with the listed file
-    move_list =  json.load(f)  # reads all of the data to a string
+with open(move_file) as f: # opens the file in read mode
+    move_list =  json.load(f)  # reads all of the data to a list of ditc
 
-def import_formater(atxt_file_import): 
-    # changes the imported data into usibal data
-    out_list = [] # this is what will get retruned
-    # data in the atxt fils are specifyed with #s=data # is the deliminator
-    # s is the string data type, = is another dleminator, there are no "" or 
+for mon in mon_list:
+    self.mon_dict[mon["number"]] = species(mon)
 
-
-for s_list in species_content:
-    self.species_list[s_list[0]] = species(s_list)
+for move in move_list:
+    self.move_dict[move["number"]] = move
